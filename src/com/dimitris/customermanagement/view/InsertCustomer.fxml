@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.dimitris.customermanagement.controller.InsertCustomerController"
+            prefWidth="500.0"
+            prefHeight="430.0"
+            stylesheets="@style.css">
+
+    <children>
+
+        <VBox alignment="TOP_CENTER"
+              spacing="20.0"
+              prefWidth="500.0"
+              prefHeight="430.0">
+
+            <padding>
+                <Insets top="30.0"
+                        right="45.0"
+                        bottom="30.0"
+                        left="45.0"/>
+            </padding>
+
+            <Label text="Νέος Πελάτης"
+                   styleClass="title-label"/>
+
+            <Label text="Συμπληρώστε τα στοιχεία του πελάτη"
+                   styleClass="subtitle-label"/>
+
+            <GridPane hgap="15.0"
+                      vgap="16.0">
+
+                <children>
+
+                    <Label text="Όνομα:"
+                           styleClass="form-label"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="firstNameField"
+                               prefWidth="250.0"
+                               promptText="Εισάγετε όνομα"
+                               GridPane.rowIndex="0"
+                               GridPane.columnIndex="1"/>
+
+                    <Label text="Επώνυμο:"
+                           styleClass="form-label"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="lastNameField"
+                               prefWidth="250.0"
+                               promptText="Εισάγετε επώνυμο"
+                               GridPane.rowIndex="1"
+                               GridPane.columnIndex="1"/>
+
+                    <Label text="ΑΦΜ:"
+                           styleClass="form-label"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="afmField"
+                               prefWidth="250.0"
+                               promptText="9 ψηφία"
+                               GridPane.rowIndex="2"
+                               GridPane.columnIndex="1"/>
+
+                    <Label text="Τηλέφωνο:"
+                           styleClass="form-label"
+                           GridPane.rowIndex="3"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="phoneField"
+                               prefWidth="250.0"
+                               promptText="10 ψηφία"
+                               GridPane.rowIndex="3"
+                               GridPane.columnIndex="1"/>
+
+                    <Label text="Email:"
+                           styleClass="form-label"
+                           GridPane.rowIndex="4"
+                           GridPane.columnIndex="0"/>
+
+                    <TextField fx:id="emailField"
+                               prefWidth="250.0"
+                               promptText="example@email.com"
+                               GridPane.rowIndex="4"
+                               GridPane.columnIndex="1"/>
+
+                </children>
+
+            </GridPane>
+
+            <Button text="Προσθήκη Πελάτη"
+                    onAction="#handleAddCustomer"
+                    prefWidth="250.0"
+                    prefHeight="44.0"
+                    styleClass="main-button"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

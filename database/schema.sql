@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS customer_management;
+
+USE customer_management;
+
+CREATE TABLE customers (
+    customer_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    tax_id CHAR(9) NOT NULL UNIQUE,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+);
